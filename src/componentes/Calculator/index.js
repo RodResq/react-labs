@@ -1,32 +1,16 @@
-function BoilingVerdict(props) {
-    if (props.celsius >= 10) {
-        return <p>The water would boil.</p>
-    }
-    return <p>The water would not boil.</p>
+
+const Calculator = () => {
+    const temperature = '';
+    return (
+        <section className="formulario">
+        <form>
+            <h2>Preencha os dados para criar o card do colaborador</h2>
+            <CampoTexto label="Nome" placeholder="Digite seu nome"/>
+            <CampoTexto label="Cargo" placeholder="Digite seu cargo"/>
+            <CampoTexto label="Imagem" placeholder="Digite o enderco da imagem"/>
+        </form>
+    </section>
+    )
 }
 
-export class Calculator extends React.Component {
-    constructor(props) {
-        super(props)
-        this.handleChange = this.handleChange.bind(this);
-        this.state = {temperature: ''};
-    }
-
-    handleChange(e) {
-        this.setState({temperature: e.target.value});
-    }
-
-    render() {
-        const temperature = this.state.temperature;
-        return (
-            <fieldset>
-                <legend>Enter temperature in Celsius</legend>
-                <input 
-                    value={temperature}
-                    onChange={this.temperature} />
-                <BoilingVerdict 
-                    celsius={parseFloat(temperature)} />
-            </fieldset>
-        )
-    }
-}
+export default Calculator

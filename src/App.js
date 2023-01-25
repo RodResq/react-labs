@@ -1,11 +1,8 @@
-import Banner from './componentes/Banner'
-import Formulario from './componentes/formulario';
+import Calculator from './componentes/Calculator';
 
 function App() {
   return (
     <div className='App'>
-      {/* <Banner />
-      <Formulario /> */}
       <Calculator />
     </div>
   );
